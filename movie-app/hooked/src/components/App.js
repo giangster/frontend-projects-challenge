@@ -4,7 +4,7 @@ import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
 
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b"; // you should replace this with yours
+const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=ad413c61"; // you should replace this with yours
 
 const App = () => {
   const [loading, setLoading] = useState(true);
