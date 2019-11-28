@@ -4,7 +4,7 @@ import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
 
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=ad413c61"; // you should replace this with yours
+const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=ad413c61";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ const App = () => {
     setLoading(true);
     setErrorMessage(null);
 
-    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`)
+    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=ad413c61`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
@@ -41,10 +41,12 @@ const App = () => {
     <div className="App">
       <Header text="HOOKED" />
       <Search search={search} />
-      <p className="App-intro">Sharing a few of our favourite movies</p>
+      <p className="App-intro">A movie a day keep the doctor away</p>
       <div className="movies">
         {loading && !errorMessage ? (
-          <span>loading...</span>
+          <div style={{ textAlign: "center", width: "100%" }}>
+            Now loading...
+          </div>
         ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (
