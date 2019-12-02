@@ -29,3 +29,24 @@
     </b-form>
   </div>
 </template>
+
+<script>
+import { mapState, mapGetters } from "vuex";
+
+export default {
+  name: "login-form",
+  data() {
+    return {
+      userId: ""
+    };
+  },
+  computed: {
+    isValid: function() {
+      const result = this.userId.length < 3;
+      return result ? result : this.loading;
+    },
+    ...mapState(["loading", "error"]),
+    ...mapGetters(["hasError"])
+  }
+};
+</script>
