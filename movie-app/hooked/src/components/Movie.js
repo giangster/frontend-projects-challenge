@@ -7,11 +7,9 @@ const Movie = ({ movie }) => {
   const poster =
     movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
   return (
-    <div className="movie">
+    <div className="movie-container">
       <h2>{movie.Title}</h2>
-      <div style={{ objectFit: "fill" }}>
-        <img alt={`The movie titled: ${movie.Title}`} src={poster} />
-      </div>
+      <img alt={`The movie titled: ${movie.Title}`} src={poster} />
       <p>{movie.Year}</p>
     </div>
   );
