@@ -12,13 +12,17 @@ export default {
     state.reconnect = reconnect;
   },
   setActiveRoom(state, roomId) {
-    state.roomId = roomId;
+    state.activeRoom = roomId;
+  },
+  setRooms(state, rooms) {
+    state.rooms = rooms;
   },
   setUsers(state, users) {
     state.users = users;
   },
   clearChatRoom(state) {
-    (state.users = []), (state.messages = []);
+    state.users = [];
+    state.messages = [];
   },
   setMessages(state, messages) {
     state.messages = messages;
