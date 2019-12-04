@@ -1,24 +1,9 @@
-# vue-chatkit
+This is a real-time chat application using Vue.js powered by ChatKit, a service provided by Pusher.
 
-## Project setup
-```
-npm install
-```
+The app will do the following:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Have multiple channels and rooms
+- List room members and detect presence status
+- Detect when other users start typing
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For this application, only the frontend is built. The ChatKit service has a back-end interface that allows managing users, permissions and rooms.
