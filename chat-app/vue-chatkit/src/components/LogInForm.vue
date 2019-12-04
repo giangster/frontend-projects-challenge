@@ -3,7 +3,7 @@
     <h5 class="text-center">Chat Login</h5>
     <hr />
     <b-form @submit.prevent="onSubmit">
-      <b-alert variant="danger" :show="hasError">{{error}}</b-alert>
+      <b-alert variant="danger" :show="hasError">{{ error }}</b-alert>
       <b-form-group id="userInputGroup" label="User Name" laber-for="userInput">
         <b-form-input
           id="userInput"
@@ -20,7 +20,7 @@
         type="submit"
         variant="primary"
         class="ld-ext-right"
-        v-bind:class="{running:loading}"
+        v-bind:class="{ running: loading }"
         :disabled="isValid"
       >
         Login
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   name: "login-form",
@@ -47,6 +47,15 @@ export default {
     },
     ...mapState(["loading", "error"]),
     ...mapGetters(["hasError"])
+  },
+  methods: {
+    ...mapActions(["login"]),
+    async onSubmit() {
+      const result = await this.login(this.userId);
+      if (result) {
+        this.$router.push("chat");
+      }
+    }
   }
 };
 </script>
