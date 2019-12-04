@@ -42,5 +42,13 @@ export default {
     } finally {
       commit("setLoading", false);
     }
+  },
+  async changeRoom({ commit }, roomId) {
+    try {
+      const { id, name } = await chatkit.subscribeToRoom(roomId);
+      commit("setActiveRoom", { id, name });
+    } catch (err) {
+      handleError(commit, error);
+    }
   }
 };
