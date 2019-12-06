@@ -63,5 +63,11 @@ export default {
     } finally {
       commit("setSending", false);
     }
+  },
+
+  async logout({ commit }) {
+    commit("reset");
+    chatkit.disconnectUser();
+    window.localStorage.clear();
   }
 };
