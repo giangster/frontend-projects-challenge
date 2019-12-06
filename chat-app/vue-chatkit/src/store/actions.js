@@ -50,5 +50,18 @@ export default {
     } catch (err) {
       handleError(commit, error);
     }
+  },
+
+  async sendMessage({ commit }, message) {
+    try {
+      commit("setError", "");
+      commit("setEnding", true);
+      const messageId = await chatkit.sendMessage(message);
+      return messageId;
+    } catch (err) {
+      handleError(commit, err);
+    } finally {
+      commit("setSending", false);
+    }
   }
 };
