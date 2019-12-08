@@ -7,4 +7,5 @@ The idea is based on [this](https://medium.com/better-programming/9-projects-you
 Technologies that I used or I get to know and familiarized with during the project:
 
 - **Movie App**: ReactJS, Hooks
-- **Chat App**: VueJS, Vuex, ChatKit
+- **Chat App**: VueJS, Vuex, Vue Router, Vue CLI, Pusher (ChatKit)
+- **Weather App**: Angular 8, Firebase, CSS
