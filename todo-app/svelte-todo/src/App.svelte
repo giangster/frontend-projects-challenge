@@ -2,14 +2,12 @@
   import Todos from "./Todos.svelte";
   export let name;
 </script>
-
+<Todos/>
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit theeee <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to
-    learn how to build Svelte apps right nowww.
-  </p>
+
 </main>
+
+
 
 <style>
   main {
