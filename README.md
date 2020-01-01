@@ -9,3 +9,4 @@ Technologies that I used or I get to know and familiarized with during the proje
 - **Movie App**: ReactJS, Hooks
 - **Chat App**: VueJS, Vuex, Vue Router, Vue CLI, Pusher (ChatKit)
 - **Weather App**: Angular 8, Firebase, CSS
+- **Todo App**: Svelte
