@@ -54,6 +54,7 @@
   function handleDeleteTodo(event) {
     todos = todos.filter(todo => todo.id !== event.detail.id);
   }
+  
   function handleToggleComplete(event) {
     const todoIndex = todos.findIndex(todo => todo.id === event.detail.id);
     const updatedTodo = {
